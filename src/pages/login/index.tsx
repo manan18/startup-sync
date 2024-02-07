@@ -2,9 +2,7 @@ import React from 'react'
 
 const Login = () => {
     return (
-        <div className="h-screen">
-            <h1>Login</h1>
-        </div>
+        <h1 className='text-red-300'>Login</h1>
     )
 }
 
