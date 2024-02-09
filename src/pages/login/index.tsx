@@ -15,9 +15,10 @@ const LoginPage = () => {
                     <p className="text-white text-2xl">Limitless Possibilities</p>
                 </div> */}
             </div>
-            <div className="flex flex-col p-20">
+            <div className="flex flex-col p-5 w-[70%] justify-center mx-auto">
                 <div className="tracking-wide gap-3">
                     <h1 className="text-2xl font-semibold">Seamless Login. Limitless Possibilities.</h1>
+
                     <p className="text-lg">Empowering Your Startup Journey!</p>
                     <LoginForm />
                 </div>
