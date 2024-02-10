@@ -10,6 +10,7 @@ import useAuth from '@/hooks/useAuth';
 import { useRouter } from 'next/router'
 import { FcGoogle } from "react-icons/fc";
 import { toast } from 'react-toastify';
+import Link from 'next/link';
 
 const LoginForm = () => {
   const router = useRouter()
@@ -55,7 +56,7 @@ const LoginForm = () => {
       }} icon={showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />} />} />
       <p className="text-xs text-gray-600 hover:text-blue-700 hover:underline cursor-pointer" onClick={forgotPassword}>Forgot Password?</p>
       <Button className="text-sm" onClick={handleLogin} disabled={loading}>Log In</Button>
-      <p className="text-xs text-gray-600">Don't have an account? <span className="text-blue-700 hover:underline cursor-pointer">Sign Up</span></p>
+      <p className="text-xs text-gray-600">Don't have an account? <Link href='/signup' className="text-blue-700 hover:underline cursor-pointer">Sign Up</Link></p>
       <div className='border-b-2 border-gray-300 my-3'></div>
       <Button className="bg-transparent border border-gray-500 hover:bg-transparent flex justify-center items-center gap-2 py-3">
         <FcGoogle />

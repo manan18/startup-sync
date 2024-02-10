@@ -14,6 +14,8 @@ import Button from '@/components/atoms/button';
 import { FcGoogle } from "react-icons/fc";
 import useAuth from '@/hooks/useAuth';
 import { AxiosError } from 'axios';
+import Link from 'next/link';
+import Validator from '../atoms/validator';
 
 const SignUpForm = () => {
     const [formstate, setFormState] = React.useState({
@@ -79,11 +81,12 @@ const SignUpForm = () => {
             <Input type="password" placeholder="Enter your Password" className=" text-gray-500" onChange={(e) => { setFormState({ ...formstate, password: e.target.value }) }} value={formstate.password} startAdornment={<RiLockPasswordLine />} endAdornment={<IconButton onClick={() => {
                 setShowPassword(!showPassword)
             }} icon={showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />} />} />
+            <Validator value={formstate.password} />
             <Input type="password" placeholder="Confirm Password" className=" text-gray-500" onChange={(e) => {
                 setCPasswd(e.target.value)
             }} value={cpasswd} startAdornment={<TbLockCheck />} endAdornment={(cpasswd.length > 0 && cpasswd == formstate.password) ? <IoMdCheckmarkCircleOutline className='text-green-600' /> : null} />
             <Button className="text-sm" onClick={handleSubmit} disabled={loading}>Sign Up</Button>
-            <p className="text-xs text-gray-600">Already have an account? <span className="text-blue-700 hover:underline cursor-pointer">Sign In</span></p>
+            <p className="text-xs text-gray-600">Already have an account? <Link href='/login' className="text-blue-700 hover:underline cursor-pointer" >Sign In</Link></p>
             <div className='border-b-2 border-gray-300 my-3'></div>
             <Button className="bg-transparent border border-gray-500 hover:bg-transparent flex justify-center items-center gap-2 py-3">
                 <FcGoogle />
