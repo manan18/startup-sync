@@ -6,11 +6,10 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import IconButton from '../atoms/button/icon';
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
-import GoogleButton from '../atoms/button/google';
-import axios from 'axios'
 import useAuth from '@/hooks/useAuth';
 import { useRouter } from 'next/router'
 import { FcGoogle } from "react-icons/fc";
+import { toast } from 'react-toastify';
 
 const LoginForm = () => {
   const router = useRouter()
@@ -33,6 +32,13 @@ const LoginForm = () => {
     setLoading(true)
     try {
       await login(formstate.email, formstate.password)
+      toast.success('Logged In Successfully', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        draggable: false
+      })
       router.push('/dashboard')
       setLoading(false)
     } catch (error) {

@@ -12,7 +12,6 @@ import IconButton from '@/components/atoms/button/icon';
 import { TbLockCheck } from "react-icons/tb";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Button from '@/components/atoms/button';
-import Image from 'next/image'
 import { FcGoogle } from "react-icons/fc";
 
 const SignUpForm = () => {
