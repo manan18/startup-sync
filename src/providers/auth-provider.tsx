@@ -14,8 +14,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     const [user, setUser] = useState<UserType | null>(null);
 
     const login = async (email: string, password: string) => {
-        const response = await instance.post('/auth/local', { identifier: email, password }
-        )
+        const response = await instance.post('/auth/local', { identifier: email, password })
         const data = response.data;
         setUser(data.user);
         Cookies.set('token', data.jwt);
@@ -26,6 +25,17 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         setUser(null);
         router.reload();
     };
+
+    const signup = async (username: string, company: string, email: string, password: string) => {
+        try {
+            const response = await instance.post('/auth/local/register', { email, username, company, password })
+            const data = response.data;
+            setUser(data.user);
+            Cookies.set('token', data.jwt);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     useEffect(() => {
         const token = Cookies.get('token');
@@ -42,7 +52,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         }
     }, []);
 
-    const value = { user, login, logout };
+    const value = { user, login, logout, signup };
 
     return (
         <AuthContext.Provider value={value}>

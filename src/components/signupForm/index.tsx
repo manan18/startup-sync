@@ -1,7 +1,6 @@
 import Input from '@/components/atoms/input'
 import React from 'react'
 import { GoMail } from "react-icons/go";
-import axios from 'axios'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify';
 import { FaUser } from "react-icons/fa6";
@@ -13,11 +12,13 @@ import { TbLockCheck } from "react-icons/tb";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Button from '@/components/atoms/button';
 import { FcGoogle } from "react-icons/fc";
+import useAuth from '@/hooks/useAuth';
+import { AxiosError } from 'axios';
 
 const SignUpForm = () => {
     const [formstate, setFormState] = React.useState({
         username: '',
-        name: '',
+        company: '',
         email: '',
         password: ''
     })
@@ -26,8 +27,9 @@ const SignUpForm = () => {
     const [cpasswd, setCPasswd] = React.useState('');
     const router = useRouter()
     const [showPassword, setShowPassword] = React.useState(false)
+    const { signup } = useAuth()
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         setLoading(true)
         if (formstate.password != cpasswd) {
             toast.error('Password does not match', {
@@ -39,7 +41,7 @@ const SignUpForm = () => {
             })
             setFormState({
                 username: '',
-                name: '',
+                company: '',
                 email: '',
                 password: ''
             })
@@ -47,25 +49,32 @@ const SignUpForm = () => {
             setLoading(false)
             return
         }
-        axios.post('http://localhost:1337/api/auth/local/register', formstate).then((res) => {
-            toast.success("Account Created Successfully")
-            router.push('/login')
-        }).catch((err) => {
-            toast.error(err.response.data.error.message)
-            setFormState({
-                username: '',
-                name: '',
-                email: '',
-                password: ''
+        try {
+            await signup(formstate.username, formstate.company, formstate.email, formstate.password)
+            toast.success('Signed Up Successfully', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                draggable: false
             })
-            setCPasswd('')
-        })
+        } catch (error: any) {
+            toast.error(error.response.data.message, {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                draggable: false
+            })
+        } finally {
+            setLoading(false)
+        }
     }
 
     return (
         <div className="flex flex-col gap-3 mt-5">
             <Input type="text" placeholder="Enter your Username" className=" text-gray-500" onChange={(e) => { setFormState({ ...formstate, username: e.target.value }) }} value={formstate.username} startAdornment={<FaUser />} />
-            <Input type="text" placeholder="Enter Company Name" className=" text-gray-500" onChange={(e) => { setFormState({ ...formstate, name: e.target.value }) }} value={formstate.name} startAdornment={<FaRegBuilding />} />
+            <Input type="text" placeholder="Enter Company Name" className=" text-gray-500" onChange={(e) => { setFormState({ ...formstate, company: e.target.value }) }} value={formstate.company} startAdornment={<FaRegBuilding />} />
             <Input type="text" placeholder="Enter your Email ID" className=" text-gray-500" onChange={(e) => { setFormState({ ...formstate, email: e.target.value }) }} value={formstate.email} startAdornment={<GoMail />} />
             <Input type="password" placeholder="Enter your Password" className=" text-gray-500" onChange={(e) => { setFormState({ ...formstate, password: e.target.value }) }} value={formstate.password} startAdornment={<RiLockPasswordLine />} endAdornment={<IconButton onClick={() => {
                 setShowPassword(!showPassword)
