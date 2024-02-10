@@ -10,6 +10,7 @@ import GoogleButton from '../atoms/button/google';
 import axios from 'axios'
 import useAuth from '@/hooks/useAuth';
 import { useRouter } from 'next/router'
+import { FcGoogle } from "react-icons/fc";
 
 const LoginForm = () => {
   const router = useRouter()
@@ -50,9 +51,10 @@ const LoginForm = () => {
       <Button className="text-sm" onClick={handleLogin} disabled={loading}>Log In</Button>
       <p className="text-xs text-gray-600">Don't have an account? <span className="text-blue-700 hover:underline cursor-pointer">Sign Up</span></p>
       <div className='border-b-2 border-gray-300 my-3'></div>
-      <div className="flex items-center justify-center">
-        <GoogleButton />
-      </div>
+      <Button className="bg-transparent border border-gray-500 hover:bg-transparent flex justify-center items-center gap-2 py-3">
+        <FcGoogle />
+        <span className="text-black text-sm">Sign In with Google</span>
+      </Button>
     </div>
   )
 }
