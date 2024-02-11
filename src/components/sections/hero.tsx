@@ -31,8 +31,8 @@ const HomeHero = () => {
       <div className="flex-1 flex items-center justify-center flex-col">
         <div className="my-auto mx-auto w-max h-full">
           <h1 className="text-white text-4xl flex-col items-center text-center max-w-[60%]">
-            We empower entrepreneurs to transform their ideas into fully
-            functioning startups ""
+            &quot; We empower entrepreneurs to transform their ideas into fully
+            functioning startups &quot;
           </h1>
         </div>
       </div>
