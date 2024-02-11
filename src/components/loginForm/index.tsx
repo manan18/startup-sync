@@ -48,7 +48,7 @@ const LoginForm = () => {
       }} icon={showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />} />} />
       <p className="text-xs text-gray-600 hover:text-blue-700 hover:underline cursor-pointer" onClick={forgotPassword}>Forgot Password?</p>
       <Button className="text-sm" onClick={handleLogin} disabled={loading}>Log In</Button>
-      <p className="text-xs text-gray-600">Don't have an account? <span className="text-blue-700 hover:underline cursor-pointer">Sign Up</span></p>
+      <p className="text-xs text-gray-600">Don&apos;t have an account? <span className="text-blue-700 hover:underline cursor-pointer">Sign Up</span></p>
       <div className='border-b-2 border-gray-300 my-3'></div>
       <div className="flex items-center justify-center">
         <GoogleButton />
