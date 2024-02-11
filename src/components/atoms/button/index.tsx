@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onClick={onClick}
       className={clsx(
-        "px-4 bg-blue-600 text-white rounded-md py-2 hover:bg-blue-600/90 transition-all duration-300 font-semibold disabled:bg-[#757579a4] disabled:text-[#7e7e81] disabled:cursor-not-allowed",
+        "px-5 bg-blue-600 text-sm text-white rounded-md py-3 hover:bg-blue-600/90 transition-all duration-300 font-semibold disabled:bg-[#757579a4] disabled:text-[#7e7e81] disabled:cursor-not-allowed",
         loading && "bg-repeating-linear-gradient scale-95",
         className
       )}
