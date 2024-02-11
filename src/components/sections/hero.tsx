@@ -38,7 +38,7 @@ const HomeHero = () => {
             Navigate Your Startup Adventure with Startup Sync
           </p>
           <div className="flex gap-4">
-            <Button>Register</Button>
+            <Button >Register</Button>
             <Button>Learn More</Button>
           </div>
         </div>
