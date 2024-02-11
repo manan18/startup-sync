@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import bg from '../../assets/img/bg3.jpeg';
+import bg from '../../assets/img/login.jpeg';
 import LoginForm from '@/components/loginForm';
 
 const LoginPage = () => {
