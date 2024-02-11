@@ -29,10 +29,11 @@ const HomeHero = () => {
           ))}
         </div>
       </div>
-      <div className="flex-1 relative">
-        <div className="flex flex-col p-4 absolute top-[27%] w-full items-center">
-          <h1 className="text-white md:text-5xl text-3xl font-bold mb-4 text-center">
-            Syncing Innovation, Igniting Entrepreneurship!
+      <div className="flex-1 flex items-center justify-center flex-col">
+        <div className="my-auto mx-auto w-max h-full">
+          <h1 className="text-white text-4xl flex-col items-center text-center max-w-[60%]">
+            We empower entrepreneurs to transform their ideas into fully
+            functioning startups ""
           </h1>
           <p className="text-white text-xl mb-4 text-center">
             Navigate Your Startup Adventure with Startup Sync
