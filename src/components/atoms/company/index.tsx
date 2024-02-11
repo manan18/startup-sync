@@ -35,7 +35,7 @@ const CompanySection = () => {
             </div>
             <div className="p-4 text-justify text-md tracking-wide flex flex-col gap-5 justify-center text-gray-800">
               <p>
-                Startup Sync is not just a platform, it's your dedicated partner in building and managing your startup. Recognizing the challenges entrepreneurs face, we've crafted a user-friendly, all-in-one solution to streamline registration processes and provide essential tools for effective startup management.
+                Startup Sync is not just a platform, it&apos;s your dedicated partner in building and managing your startup. Recognizing the challenges entrepreneurs face, we&apos;ve crafted a user-friendly, all-in-one solution to streamline registration processes and provide essential tools for effective startup management.
               </p>
               <p>
                 <span className="text-lg font-semibold text-gray-950">Vision for the Future:</span>
