@@ -20,7 +20,8 @@ const HomeHero = () => {
         <div className="flex gap-8 items-center justify-center">
           {navLinks.map((link, index) => (
             <Link href={link.path} key={index} className="text-white">
-              {link.title}
+                  {link.title}
+                  
             </Link>
           ))}
         </div>
