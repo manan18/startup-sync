@@ -1,14 +1,13 @@
 import React from 'react'
+import Card from '../atoms/card'
+import Image from 'next/image'
+import logo from '@/assets/img/logo.png'
+
 
 const Blog = () => {
   return (
-    <div className='text-center font-sans text-blue-800 my-3 text-4xl antialiased bg-blend-normal'>
-       <h3 className='font-bold pb-3'> What people are saying </h3>
-
-        <div className= 'text-stone-400 text-lg '>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <p>Pharetra sit amet aliquam id diam maecenas ultricies. </p>
-        </div>
+    <div className='bg-[#023e8a] p-5'>
+      <Card image={logo} title='test heading' date='13-02-2024' author='Ria' description='hellow how do you do' />
     </div>
   )
 }
