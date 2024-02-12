@@ -33,7 +33,7 @@ const HomeHero = () => {
         <div className="my-auto mx-auto w-max h-full">
           <h1 className="text-white text-4xl flex-col items-center text-center max-w-[60%]">
             We empower entrepreneurs to transform their ideas into fully
-            functioning startups ""
+            functioning startups
           </h1>
           <p className="text-white text-xl mb-4 text-center">
             Navigate Your Startup Adventure with Startup Sync
