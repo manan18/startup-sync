@@ -1,8 +1,10 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
+import { MdOutlineDateRange } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa";
 
-interface CardProps {
+export type BlogCardProps = {
   image: StaticImport;
   title: string;
   description: string;
@@ -10,18 +12,18 @@ interface CardProps {
   author: string;
 }
 
-const Card: React.FC<CardProps> = ({ image, title, description, date, author }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ image, title, description, date, author }) => {
   return (
     <div className="flex flex-col bg-white gap-3 p-3 w-max">
       <Image src={image} alt={'image'} width={300} height={200} />
       <h1 className="tracking-wide text-black text-center">{title}</h1>
       <div className="flex justify-between">
-        <p className="">{date}</p>
-        <p className="">{author}</p>
+        <p className="flex items-center gap-2 text-sm"><MdOutlineDateRange />{date}</p>
+        <p className="flex items-center gap-2 text-sm"><FaRegUser />{author}</p>
       </div>
-      <p>{description}</p>
+      <p className="">{description}</p>
     </div>
   );
 };
 
-export default Card;
+export default BlogCard;
