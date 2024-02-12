@@ -7,7 +7,6 @@ interface TabProps {
 }
 
 const Tabs: React.FC<TabProps> = ({ tabs, activeTab, setActiveTab }) => {
-  console.log({ activeTab });
   return (
     <div className={`grid grid-cols-${tabs.length} text-lg`}>
       {tabs.map((tab) => {
