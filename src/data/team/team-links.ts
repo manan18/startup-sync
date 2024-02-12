@@ -1,4 +1,8 @@
 import ria from '@/assets/img/ria2.jpg'
+import shruti from '@/assets/img/shruti.jpg'
+import manan from '@/assets/img/manan.jpg'
+import sumit from '@/assets/img/sumit.jpg'
+import sakshi from '@/assets/img/sakshi.jpg'
 
 const teamLinks = [
     {
@@ -8,25 +12,25 @@ const teamLinks = [
         startCol: 1,
     },
     {
-        img: ria,
+        img: sumit,
         name: 'Sumit Raj',
         role: 'Founder',
         startCol: 3,
     },
     {
-        img: ria,
+        img: shruti,
         name: 'Shruti Gajbhiye',
         role: 'Founder',
         startCol: 5,
     },
     {
-        img: ria,
+        img: sakshi,
         name: 'Sakshi Sharma',
         role: 'Founder',
         startCol: 2,
     },
     {
-        img: ria,
+        img: manan,
         name: 'Manan Chawla',
         role: 'Founder',
         startCol: 4,
