@@ -4,7 +4,7 @@ import HomeHero from "../components/sections/hero";
 import CompanySection from "@/components/atoms/company";
 import Stats from "@/components/stats";
 import Blog from "@/components/blogs";
-
+import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       <CompanySection />
       <Stats />
       <Blog />
+      <Footer />
     </div>
   );
 }

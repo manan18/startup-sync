@@ -3,6 +3,8 @@ import Tabs from "../tabs";
 import TeamCard from "../teamcard";
 import teamLinks from "@/data/team/team-links";
 import Image from "next/image";
+import company from "@/assets/img/company.jpg";
+import clsx from "clsx";
 
 const CompanySection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -24,16 +26,16 @@ const CompanySection = () => {
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
-      <div className=" mx-auto p-4 ">
+      <div className=" mx-auto p-14 ">
         {!activeTab ? (
           <div className="grid grid-cols-2 p-4">
             <div className="">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-                alt="Img"
-                className="h-[450px] w-[450px] mx-auto"
-                width={450}
-                height={450}
+                src={company}
+                alt="company"
+                width={500}
+                height={500}
+                className="mx-auto"
               />
             </div>
             <div className="p-4 text-justify text-md tracking-wide flex flex-col gap-5 justify-center text-gray-800">
@@ -62,17 +64,24 @@ const CompanySection = () => {
             </div>
           </div>
         ) : (
-          <div className="flex p-6 flex-wrap items-center justify-center ">
-            {teamLinks.map((team, index) => {
-              return (
-                <TeamCard
-                  img={team.img}
-                  name={team.name}
-                  role={team.role}
-                  key={index}
-                />
-              );
-            })}
+          <div className="">
+            <div className="grid grid-cols-5">
+              {teamLinks.map((team, index) => {
+                return (
+                  <div
+                    className={clsx(`h-[40%]`, `col-start-${team.startCol}`)}
+                    key={index}
+                  >
+                    <TeamCard
+                      img={team.img}
+                      name={team.name}
+                      role={team.role}
+                      key={index}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
