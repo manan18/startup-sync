@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HomeHero />
       <CompanySection />
       <Stats />
       <Blog />
-    </>
+    </div>
   );
 }
