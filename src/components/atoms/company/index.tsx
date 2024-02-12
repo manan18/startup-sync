@@ -3,7 +3,7 @@ import Tabs from "../tabs";
 import TeamCard from "../teamcard";
 import teamLinks from "@/data/team/team-links";
 import Image from "next/image";
-import company from '@/assets/img/company.jpg';
+import company from "@/assets/img/company.jpg";
 import clsx from "clsx";
 
 const CompanySection = () => {
@@ -30,7 +30,13 @@ const CompanySection = () => {
         {!activeTab ? (
           <div className="grid grid-cols-2 p-4">
             <div className="">
-              <Image src={company} alt="company" width={500} height={500} className="mx-auto" />
+              <Image
+                src={company}
+                alt="company"
+                width={500}
+                height={500}
+                className="mx-auto"
+              />
             </div>
             <div className="p-4 text-justify text-md tracking-wide flex flex-col gap-5 justify-center text-gray-800">
               <p>
@@ -58,26 +64,13 @@ const CompanySection = () => {
             </div>
           </div>
         ) : (
-          // <div className="flex p-6 flex-wrap items-center justify-center ">
-          //   {teamLinks.map((team, index) => {
-          //     return (
-          //       <TeamCard
-          //         img={team.img}
-          //         name={team.name}
-          //         role={team.role}
-          //         key={index}
-          //       />
-          //     );
-          //   })
-          //   }
-          // </div>
-
           <div className="">
             <div className="grid grid-cols-5">
               {teamLinks.map((team, index) => {
                 return (
                   <div
                     className={clsx(`h-[40%]`, `col-start-${team.startCol}`)}
+                    key={index}
                   >
                     <TeamCard
                       img={team.img}
@@ -89,14 +82,6 @@ const CompanySection = () => {
                 );
               })}
             </div>
-
-            {/* <div className="grid grid-cols-5">
-              <div className="col-start-1">1</div>
-              <div className="col-start-3">3</div>
-              <div className="col-start-5">5</div>
-              <div className="col-start-2">2</div>
-              <div className="col-start-4">4</div>
-            </div> */}
           </div>
         )}
       </div>
