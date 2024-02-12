@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Tabs from "../tabs";
 import TeamCard from "../teamcard";
 import teamLinks from "@/data/team/team-links";
+import Image from "next/image";
+import company from '@/assets/img/company.jpg';
 
 const CompanySection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -27,11 +29,7 @@ const CompanySection = () => {
         {!activeTab ? (
           <div className="grid grid-cols-2 p-4">
             <div className="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-                alt="Img"
-                className="h-[450px] w-[450px] mx-auto"
-              />
+              <Image src={company} alt="company" width={500} height={500} className="mx-auto" />
             </div>
             <div className="p-4 text-justify text-md tracking-wide flex flex-col gap-5 justify-center text-gray-800">
               <p>
