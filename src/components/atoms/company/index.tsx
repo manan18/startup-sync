@@ -26,7 +26,7 @@ const CompanySection = () => {
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
-      <div className=" mx-auto p-4 ">
+      <div className=" mx-auto p-14 ">
         {!activeTab ? (
           <div className="grid grid-cols-2 p-4">
             <div className="">
@@ -72,7 +72,7 @@ const CompanySection = () => {
           //   }
           // </div>
 
-          <div className="mt-[10%]">
+          <div className="">
             <div className="grid grid-cols-5">
               {teamLinks.map((team, index) => {
                 return (
