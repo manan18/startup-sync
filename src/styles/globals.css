@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .gsi-material-button {
     -moz-user-select: none;
     -webkit-user-select: none;

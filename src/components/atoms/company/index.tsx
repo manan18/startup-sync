@@ -21,7 +21,7 @@ const CompanySection = () => {
   ];
 
   return (
-    <div className="p-4 h-screen overflow-hidden flex flex-col">
+    <div className="p-4 h-screen overflow-hidden flex flex-col" id="company">
       <div className="w-[70%] mx-auto">
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
