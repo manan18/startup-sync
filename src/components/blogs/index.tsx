@@ -1,14 +1,21 @@
 import React from 'react'
+import Card from '../atoms/blogcard'
+import Image from 'next/image'
+import logo from '@/assets/img/logo.png'
+
 
 const Blog = () => {
   return (
-    <div className='text-center font-sans text-blue-800 my-3 text-4xl antialiased bg-blend-normal'>
-       <h3 className='font-bold pb-3'> What people are saying </h3>
+    <div className='bg-[#023e8a] flex flex-col p-8 items-center gap-5'>
+      <h1 className='tracking-wide text-white text-3xl font-semibold'>Exploring Startup Wisdom and Market Trends</h1>
+      <p className='text-white tracking-wide font-md w-[50%] text-center'>Dive into the realms of knowledge and inspiration with our thought-provoking blogs, crafted to spark curiosity and ignite your intellect.</p>
+      <div className='justify-between flex'>
+        <Card image={logo} title='test heading' date='13-02-2024' author='Ria' description='hellow how do you do' />
+        <Card image={logo} title='test heading' date='13-02-2024' author='Ria' description='hellow how do you do' />
+        <Card image={logo} title='test heading' date='13-02-2024' author='Ria' description='hellow how do you do' />
+        <Card image={logo} title='test heading' date='13-02-2024' author='Ria' description='hellow how do you do' />
 
-        <div className= 'text-stone-400 text-lg '>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <p>Pharetra sit amet aliquam id diam maecenas ultricies. </p>
-        </div>
+      </div>
     </div>
   )
 }

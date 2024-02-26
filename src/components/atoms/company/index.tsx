@@ -21,12 +21,12 @@ const CompanySection = () => {
   ];
 
   return (
-    <div className="p-4 h-screen overflow-hidden">
+    <div className="p-4 h-screen overflow-hidden flex flex-col" id="company">
       <div className="w-[70%] mx-auto">
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
-      <div className=" mx-auto p-10">
+      <div className=" mx-auto p-10 flex-1 flex items-center">
         <div
           className={clsx(
             "grid grid-cols-2",
@@ -37,12 +37,12 @@ const CompanySection = () => {
             <Image
               src={company}
               alt="company"
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               className="mx-auto"
             />
           </div>
-          <div className="p-4 text-justify text-md tracking-wide flex flex-col gap-5 justify-center text-gray-800">
+          <div className="p-4 px-10 text-justify text-md tracking-wide flex flex-col gap-5 justify-center text-gray-800">
             <p>
               Startup Sync is not just a platform, it&apos;s your dedicated
               partner in building and managing your startup. Recognizing the
