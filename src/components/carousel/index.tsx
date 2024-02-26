@@ -1,32 +1,49 @@
-import React, { Ref } from "react";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import BlogCard, { BlogCardProps } from "@/components/atoms/blogcard";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-interface Props {
-  data: BlogCardProps[];
-  sliderRef: Ref<SwiperRef>;
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import BlogCard from "../atoms/blogcard";
+
+interface BlogCarouselProps {
+  data: {
+    author: string;
+    date: string;
+    description: string;
+    image: StaticImport | string;
+    title: string;
+  }[];
 }
 
-const BlogCarousel = ({ data, sliderRef }: Props) => {
-
+export default function BlogCarousel({ data }: BlogCarouselProps) {
   return (
     <>
       <Swiper
-        ref={sliderRef}
-        spaceBetween={50}
+        navigation={true}
         modules={[Navigation]}
+        className="w-full"
         slidesPerView={3}
-        slidesPerGroup={1}
+        spaceBetween={50}
+        slidesPerGroup={3}
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <BlogCard {...item} />
+            <BlogCard
+              author={item.author}
+              date={item.date}
+              description={item.description}
+              title={item.title}
+              image={item.image}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
     </>
   );
-};
-
-export default BlogCarousel;
+}
