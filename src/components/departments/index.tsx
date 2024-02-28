@@ -1,5 +1,5 @@
 import React from "react";
-import departments from "@/data/departments";
+import departments from "@/data/department/departments";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdSettings } from "react-icons/io";
