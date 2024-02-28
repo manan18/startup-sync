@@ -2,8 +2,14 @@ import React from "react";
 import navLinks from "@/data/landing/nav-links";
 import Link from "next/link";
 import Button from "../atoms/button";
+import { useRouter } from "next/router";
 
 const HomeHero = () => {
+  const router = useRouter();
+  const handleRegister = () => {
+    router.push('/signup')
+  }
+
   return (
     <div className="h-screen flex flex-col relative w-screen overflow-hidden">
       <video
@@ -38,8 +44,8 @@ const HomeHero = () => {
             Navigate Your Startup Adventure with Startup Sync
           </p>
           <div className="flex gap-4">
-            <Button>Register</Button>
-            <Button>Learn More</Button>
+            <Button onClick={handleRegister}>Register</Button>
+            <Button><Link href="#company">Learn More</Link></Button>
           </div>
         </div>
       </div>

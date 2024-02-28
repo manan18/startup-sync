@@ -4,18 +4,17 @@ import HomeHero from "../components/sections/hero";
 import CompanySection from "@/components/atoms/company";
 import Stats from "@/components/stats";
 import Blog from "@/components/blogs";
-import Layout from "@/components/layout";
-
+import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      {/* <HomeHero />
+      <HomeHero />
       <CompanySection />
       <Stats />
-      <Blog /> */}
-      <Layout />
+      <Blog />
+      <Footer />
     </div>
   );
 }
