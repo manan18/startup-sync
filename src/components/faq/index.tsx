@@ -9,7 +9,7 @@ const Faq = () => {
     }
 
     return (
-        <div className="bg-gray-50">
+        <div className="border-t-2 border-gray-300">
             <div className="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-3xl divide-y-2 divide-gray-200">
                     <h2 className="text-center text-3xl font-semibold tracking-wide text-[#023e8a]">
