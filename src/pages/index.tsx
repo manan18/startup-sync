@@ -5,6 +5,7 @@ import CompanySection from "@/components/atoms/company";
 import Stats from "@/components/stats";
 import Blog from "@/components/blogs";
 import Footer from "@/components/footer";
+import Faq from "@/components/faq";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <CompanySection />
       <Stats />
       <Blog />
+      <Faq />
       <Footer />
     </div>
   );
