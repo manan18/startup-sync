@@ -20,7 +20,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   author,
 }) => {
   return (
-    <div className="flex flex-col bg-white gap-3 p-3 w-full">
+    <div className="flex flex-col bg-white gap-3 p-3 w-">
       <Image src={image} alt={"image"} width={300} height={200} />
       <h1 className="tracking-wide text-black text-center">{title}</h1>
       <div className="flex justify-between">
