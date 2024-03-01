@@ -4,8 +4,8 @@ import clsx from 'clsx'
 interface InputProps {
     type: string;
     placeholder: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    value: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    value?: string;
     className?: string;
     startAdornment?: React.ReactNode;
     endAdornment?: React.ReactNode;
