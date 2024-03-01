@@ -6,7 +6,7 @@ interface TCard1Props {
   text2: string;
 }
 
-const TCard1 = ({ money, text1, text2 }) => {
+const TCard1 = ({ money, text1, text2 }: TCard1Props) => {
   return (
     <div className="border-2 flex justify-between w-[40%] p-7 rounded-lg">
       <div className="flex flex-col">
