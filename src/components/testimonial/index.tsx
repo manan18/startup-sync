@@ -18,7 +18,7 @@ const Testimonial = () => {
                                 <TestimonialCard key={idx} {...card} />
                             </>
                         } else {
-                            return <TestimonialCard {...card} />
+                            return <TestimonialCard {...card} key={idx} />
                         }
                     })
                 }
