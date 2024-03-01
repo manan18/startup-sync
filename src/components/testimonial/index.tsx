@@ -14,8 +14,8 @@ const Testimonial = () => {
                     cards.map((card, idx) => {
                         if (idx === 1) {
                             return <>
-                                <HeroCard />
-                                <TestimonialCard {...card} />
+                                <HeroCard key={idx} />
+                                <TestimonialCard key={idx} {...card} />
                             </>
                         } else {
                             return <TestimonialCard {...card} />

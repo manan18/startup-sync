@@ -31,8 +31,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, username, descr
 const HeroCard = () => {
     return (
         <div className='col-span-2 row-span-2 m-3  border rounded-lg shadow-lg p-12 flex flex-col justify-center'>
-            <div className='text-center text-xl font-semibold border-b border-gray-300 pb-12'>"The event management features exceeded our expectations. Planning and executing events has become a joy, and the analysis tools provided invaluable post-event insights. The seamless coordination and detailed analytics have empowered us to not only host successful events but also continuously refine our strategies for even greater impact in the future."</div>
-            
+            <div className='text-center text-xl font-semibold border-b border-gray-300 pb-12'>&apos;The event management features exceeded our expectations. Planning and executing events has become a joy, and the analysis tools provided invaluable post-event insights. The seamless coordination and detailed analytics have empowered us to not only host successful events but also continuously refine our strategies for even greater impact in the future.&apos;</div>
+
         </div>
     )
 }
