@@ -27,7 +27,7 @@ export default function BlogCarousel({ data }: BlogCarouselProps) {
       <Swiper
         navigation={true}
         modules={[Navigation]}
-        className="w-full"
+        className="w-[85%]"
         slidesPerView={3}
         spaceBetween={50}
         slidesPerGroup={3}
