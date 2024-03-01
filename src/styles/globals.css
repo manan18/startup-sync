@@ -39,22 +39,6 @@ html {
   min-width: min-content;
 }
 
-body {
-  background: radial-gradient(
-      circle at 50% 50%,
-      rgba(29, 78, 216, 0.15) 0%,
-      rgba(29, 78, 216, 0) 72%
-    ),
-    radial-gradient(circle at 0% 0%, #ffffff 0%, #ffffff 100%) 0 0,
-    radial-gradient(circle at 100% 0%, #ffffff 0%, #ffffff 100%) 100% 0,
-    radial-gradient(circle at 100% 100%, #ffffff 0%, #ffffff 100%) 100% 100%,
-    radial-gradient(circle at 0% 100%, #ffffff 0%, #ffffff 100%) 0 100%;
-  background-color: #1d4ed8;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
 .gsi-material-button .gsi-material-button-icon {
   height: 20px;
   margin-right: 12px;
@@ -132,3 +116,4 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
