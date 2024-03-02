@@ -4,15 +4,8 @@ import DashboardCard from "@/components/atoms/dashCard";
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className="grid grid-cols-[15%,1fr] h-screen">
-        <div className="">
-          <Sidebar />
-        </div>
-        <div className="bg-gray-100">
-          <DashboardCard />
-        </div>
-      </div>
+    <div className="flex">
+      <Sidebar />
     </div>
   );
 };
