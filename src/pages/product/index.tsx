@@ -31,7 +31,7 @@ const ProductPage = () => {
 
         <div className="bg-[#f4f7fe]">
           <div>
-            <h1 className="font-sans px-5 pt-3 font-bold">Sales Overview</h1>
+            <h1 className="font-sans px-5 pt-3 font-bold text-2xl">Sales Overview</h1>
           </div>
 
           <div className="flex rounded-lg p-4 gap-2 justify-between">
