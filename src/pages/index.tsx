@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import Faq from "@/components/faq";
 import Features from "@/components/features";
 import Testimonial from "@/components/testimonial";
+import NewsLetter from "@/components/newsletter";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Stats />
       <Testimonial />
       <Blog />
+      <NewsLetter />
       <Faq />
       <Footer />
     </div>

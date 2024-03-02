@@ -5,7 +5,7 @@ import { IoCheckmark } from "react-icons/io5";
 const Features = () => {
     return (
         <div className="bg-white w-full px-10">
-            <div className="mx-auto sm:px-6 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:py-24 lg:px-8 ms-10">
+            <div className="mx-auto sm:px-6 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:pb-20  lg:px-8 ms-10">
                 <div>
                     <h2 className="text-lg font-semibold text-[#e85d04]">Seamless Startup Management</h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-black">All-In-One Platform</p>
