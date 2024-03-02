@@ -7,6 +7,8 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import ProductCard from "@/components/atoms/productcard";
 import { AiOutlineDollarCircle } from "react-icons/ai";
+import TopProductCard from "@/components/atoms/topproductscard";
+import { CustomerCard } from "@/components/atoms/customercard";
 
 const ProductPage = () => {
   return (
@@ -29,10 +31,10 @@ const ProductPage = () => {
 
         <div className="bg-[#f4f7fe]">
           <div>
-            <h1 className="font-serif">Sales Overview</h1>
+            <h1 className="font-sans px-5 pt-3 font-bold">Sales Overview</h1>
           </div>
 
-          <div className="flex rounded-md p-2">
+          <div className="flex rounded-lg p-4 gap-2 justify-between px-4">
             <ProductCard
               icon={<AiOutlineDollarCircle />}
               title="Total Sales"
@@ -45,7 +47,7 @@ const ProductPage = () => {
               icon={<AiOutlineDollarCircle />}
               title="Total Purchase"
               amount="$18.690.00"
-              profit="-2.3%"
+              profit="+2.3%"
               description="vs last year"
             />
 
@@ -68,11 +70,24 @@ const ProductPage = () => {
 
           {/* <div>
           order and sales overview
-        </div>
-
-        <div>
-          top products
         </div> */}
+
+          <div className="flex gap-4 p-4">
+            <div>
+              <TopProductCard />
+            </div>
+            <div>
+              <CustomerCard
+                title="Customer"
+                current="Current Customer"
+                newcust="New Customer"
+                retargeting="Retargeted Customer"
+                percent1="60%"
+                percent2="20%"
+                percent3="20%"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
