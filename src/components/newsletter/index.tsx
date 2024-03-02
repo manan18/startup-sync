@@ -20,7 +20,7 @@ const NewsLetter = () => {
                                 Email address
                             </label>
                             <Input type="text" placeholder="Enter your email" className='border-gray-200 border  rounded-md' />
-                            <Button className=" bg-white text-[#0353a4] hover:bg-slate-300 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm">
+                            <Button className=" bg-white !text-[#0353a4] hover:bg-slate-300 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm">
                                 Subscribe
                             </Button>
                         </div>

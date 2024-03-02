@@ -18,7 +18,7 @@ const Cta = () => {
                 <p className="mt-4 text-lg leading-6 text-indigo-200">
                     Seize the moment! Elevate your startup experience and propel towards success. Join Startup Sync today for a seamless, all-in-one platform that empowers your entrepreneurial journey like never before.
                 </p>
-                <Button className="mt-8 w-full sm:w-auto sm:mx-auto bg-white text-[#0353a4] hover:bg-slate-300" onClick={handleClick}>
+                <Button className="mt-8 w-full sm:w-auto sm:mx-auto bg-white !text-[#0353a4] hover:bg-slate-300" onClick={handleClick}>
                     Get Started
                 </Button>
             </div>
