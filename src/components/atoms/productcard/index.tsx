@@ -13,9 +13,9 @@ export type ProductCardProps = {
 const ProductCard: React.FC<ProductCardProps> = ({icon,title,amount,profit,description}) =>
 {
     return (
-        <div className='flex-col rounded-md p-2 bg-white px-px'>
-            <div className='flex justify-between'>
-                <div className='bg-gray-200 rounded-md p-2 '>
+        <div className='flex-col rounded-lg bg-white p-2 border-1 shadow-md'>
+            <div className='flex justify-between p-1'>
+                <div className='bg-purple-100 rounded-md p-2 '>
                     {icon}
                 </div>
                 <div>
@@ -23,18 +23,18 @@ const ProductCard: React.FC<ProductCardProps> = ({icon,title,amount,profit,descr
                 </div>
             </div>
 
-            <div>
-                <h3 className='font-light font-sans'>{title}</h3>
+            <div className='p-1'>
+                <h3 className='text-slate-500 font-sans text-sm'>{title}</h3>
             </div>
 
-            <div className='flex'>
-                <div>
+            <div className='flex p-1 gap-2 items-center'>
+                <div className='text-xl font-semibold'>
                     {amount}
                 </div>
-                <div>
+                <div className=' text-xs bg-green-200 rounded-md p-1'>
                     {profit}
                 </div>
-                <div>
+                <div className='text-xs font-sans text-slate-600 antialiased'>
                     {description}
                 </div>
             </div>
