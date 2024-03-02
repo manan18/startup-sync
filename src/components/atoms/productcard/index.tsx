@@ -24,17 +24,17 @@ const ProductCard: React.FC<ProductCardProps> = ({icon,title,amount,profit,descr
             </div>
 
             <div className='p-1'>
-                <h3 className='text-slate-500 font-sans text-sm'>{title}</h3>
+                <h3 className='text-slate-500 font-sans text-lg'>{title}</h3>
             </div>
 
             <div className='flex p-1 gap-2 items-center'>
                 <div className='text-xl font-semibold'>
                     {amount}
                 </div>
-                <div className=' text-xs bg-green-200 rounded-md p-1'>
+                <div className=' text-sm bg-green-200 rounded-md p-1'>
                     {profit}
                 </div>
-                <div className='text-xs font-sans text-slate-600 antialiased'>
+                <div className='text-sm font-sans text-slate-600 antialiased'>
                     {description}
                 </div>
             </div>
