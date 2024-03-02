@@ -34,7 +34,7 @@ const ProductPage = () => {
             <h1 className="font-sans px-5 pt-3 font-bold">Sales Overview</h1>
           </div>
 
-          <div className="flex rounded-lg p-4 gap-2 justify-between px-4">
+          <div className="flex rounded-lg p-4 gap-2 justify-between">
             <ProductCard
               icon={<AiOutlineDollarCircle />}
               title="Total Sales"
