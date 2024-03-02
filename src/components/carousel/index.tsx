@@ -13,9 +13,9 @@ import BlogCard from "../atoms/blogcard";
 
 interface BlogCarouselProps {
   data: {
+    icon: StaticImport | string;
     author: string;
     date: string;
-    description: string;
     image: StaticImport | string;
     title: string;
   }[];
@@ -27,7 +27,7 @@ export default function BlogCarousel({ data }: BlogCarouselProps) {
       <Swiper
         navigation={true}
         modules={[Navigation]}
-        className="w-[85%]"
+        className="w-[80%]"
         slidesPerView={3}
         spaceBetween={50}
         slidesPerGroup={3}
@@ -35,9 +35,9 @@ export default function BlogCarousel({ data }: BlogCarouselProps) {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <BlogCard
+              icon={item.icon}
               author={item.author}
               date={item.date}
-              description={item.description}
               title={item.title}
               image={item.image}
             />
