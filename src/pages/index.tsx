@@ -9,6 +9,7 @@ import Faq from "@/components/faq";
 import Features from "@/components/features";
 import Testimonial from "@/components/testimonial";
 import NewsLetter from "@/components/newsletter";
+import Cta from "@/components/cta";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Blog />
       <NewsLetter />
       <Faq />
+      <Cta />
       <Footer />
     </div>
   );
