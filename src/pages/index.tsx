@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden" suppressHydrationWarning>
       <HomeHero />
       <CompanySection />
       <Features />

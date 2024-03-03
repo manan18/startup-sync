@@ -24,27 +24,27 @@ export const CustomerCard: React.FC<CustomerCardProps> = ({
     <div className="flex-col flex-1 rounded-lg bg-white p-2 border-1 shadow-md">
       <div className="flex justify-between p-2">
         <div>
-          <h1 className="font-sans font-semibold">Customer</h1>
+          <h1 className="font-bold text-xl">Customer</h1>
         </div>
-        <div>
+        <div className="items-center">
           <BsThreeDots />
         </div>
       </div>
 
-      <div className="flex-col text-slate-600 p-2 flex gap-2">
+      <div className="flex-col text-slate-500 p-2 flex gap-3">
         <div className="flex flex-col gap-1">
-          <div className="text-sm font-semibold">{current}</div>
-          <div className="text-xs text-purple-500">{percent1}</div>
+          <div className="text-md font-semibold">{current}</div>
+          <div className="text-sm text-purple-500 antialiased">{percent1}</div>
         </div>
 
         <div className="flex flex-col gap-1">
-          <div className="text-sm font-semibold">{newcust}</div>
-          <div className="text-xs text-yellow-500">{percent2}</div>
+          <div className="text-md font-semibold">{newcust}</div>
+          <div className="text-sm text-yellow-500 antialiased">{percent2}</div>
         </div>
 
         <div className="flex flex-col gap-1">
-          <div className="text-sm font-semibold">{retargeting}</div>
-          <div className="text-xs text-orange-500">{percent3}</div>
+          <div className="text-md font-semibold">{retargeting}</div>
+          <div className="text-sm text-orange-500 antialiased">{percent3}</div>
         </div>
       </div>
     </div>

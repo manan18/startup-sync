@@ -7,7 +7,7 @@ const Merchandise = () => {
     return (
         <div className='flex h-screen overflow-hidden'>
             <Sidebar />
-            <div className='flex flex-col flex-1 p-8 gap-1 bg-gray-200 overflow-scroll'>
+            <div className='flex flex-col flex-1 p-8 gap-1 bg-[#f4f7fe] overflow-scroll'>
                 <h1 className='tracking-wide font-bold text-[#0353a4] text-3xl'>Elevate Your Style</h1>
                 <p className='tracking-wide text-lg '>Discover Exclusivity in Our Merchandise Emporium!</p>
                 <div className="bg-transparent">
