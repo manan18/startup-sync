@@ -9,6 +9,8 @@ import ProductCard from "@/components/atoms/productcard";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import TopProductCard from "@/components/atoms/topproductscard";
 import { CustomerCard } from "@/components/atoms/customercard";
+import { SalesCard } from "@/components/atoms/salescard";
+import { OrderCard } from "@/components/atoms/ordercard";
 
 const ProductPage = () => {
   return (
@@ -70,14 +72,16 @@ const ProductPage = () => {
             />
           </div>
 
-          <div className="flex justify-between">
-            {/* <div>
-              graph
-            </div> */}
-            <div>{/* <SalesCard /> */}</div>
+          <div className="flex">
+            <div className="p-4">
+              <OrderCard />
+            </div>
+            <div className="p-4">
+              <SalesCard />
+            </div>
           </div>
 
-          <div className="flex gap-4 p-4">
+          <div className="flex gap-2 p-4">
             <div>
               <TopProductCard />
             </div>
