@@ -1,41 +1,54 @@
 import { FaHome } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
-import { GoGoal } from "react-icons/go";
-import { FaStar } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { IoBagCheck } from "react-icons/io5";
 import { SiGoogleanalytics } from "react-icons/si";
+import { MdOutlineAttachMoney } from "react-icons/md";
+import { IoSettingsSharp } from "react-icons/io5";
 
 interface SidebarItem {
     id: number;
     title: string;
     icon: React.ReactNode;
+    onClick?: () => void;
 }
 
 const sidebarItems1: SidebarItem[] = [
     {
         id: 0,
-        title: "Home",
+        title: "Dashboard",
         icon: <FaHome />,
     },
     {
         id: 1,
-        title: "Teams",
+        title: "Team Management",
         icon: <RiTeamFill />,
     },
     {
         id: 2,
-        title: "Goals",
-        icon: <GoGoal />,
+        title: "Event Management",
+        icon: <FaCalendarAlt />,
     },
     {
         id: 3,
-        title: "Private Tasks",
-        icon: <FaStar />,
+        title: "Merchandise Store",
+        icon: <IoBagCheck />,
     },
     {
         id: 4,
-        title: "Analytics",
+        title: "Product Analysis",
         icon: <SiGoogleanalytics />,
     },
+    {
+        id: 5,
+        title: "Expense Tracking",
+        icon: <MdOutlineAttachMoney className="text-lg" />,
+    },
+    {
+        id: 6,
+        title: "Settings",
+        icon: <IoSettingsSharp />,
+    }
 ];
 
 export default sidebarItems1;
