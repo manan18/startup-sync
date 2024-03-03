@@ -26,23 +26,23 @@ export const CustomerCard: React.FC<CustomerCardProps> = ({
         <div>
           <h1 className="font-bold text-xl">Customer</h1>
         </div>
-        <div>
+        <div className="items-center">
           <BsThreeDots />
         </div>
       </div>
 
       <div className="flex-col text-slate-500 p-2 flex gap-3">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <div className="text-md font-semibold">{current}</div>
           <div className="text-sm text-purple-500 antialiased">{percent1}</div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <div className="text-md font-semibold">{newcust}</div>
           <div className="text-sm text-yellow-500 antialiased">{percent2}</div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <div className="text-md font-semibold">{retargeting}</div>
           <div className="text-sm text-orange-500 antialiased">{percent3}</div>
         </div>

@@ -25,7 +25,7 @@ const TopProductCard = () => {
             </tr>           
         </thead>
 
-        <tbody className="text-sm text-slate-600 antialiased">
+        <tbody className=" text-slate-600 antialiased">
             <tr>
                 <td className="px-4 py-2">1</td>
                 <td className="px-6 py-2">Dell XPS 15</td>
@@ -58,14 +58,14 @@ const TopProductCard = () => {
                 <td className="px-4 py-2">Available</td>
                 <td className="px-4 py-2">5%</td>
             </tr>
-            <tr>
+            {/* <tr>
                 <td className="px-4 py-2">5</td>
                 <td className="px-6 py-2">Asus Zenbook</td>
                 <td className="px-4 py-2">$ 500</td>
                 <td className="px-4 py-2">5</td>
                 <td className="px-4 py-2">Available</td>
                 <td className="px-4 py-2">2%</td>
-            </tr>
+            </tr> */}
         </tbody>
 
       </table>
