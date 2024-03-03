@@ -135,7 +135,7 @@ export const Popup = ({
 
 export const RightBar = () => {
   return (
-    <div className="p-4 py-8 bg-white border-l max-w-72 min-w-64">
+    <div className="p-4 py-8 bg-white border-l w-full">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
@@ -165,7 +165,7 @@ const EventsPage = () => {
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar />
-      <div className="flex-1 grid grid-cols-[1fr,auto] bg-[#f4f7fe] font-noto-sans">
+      <div className="flex-1 grid grid-cols-[1fr,25%] bg-[#f4f7fe] font-noto-sans">
         <div className="p-8 overflow-scroll">
           <div className="flex h-max items-center justify-between">
             <Greetings user="Sumit" />
