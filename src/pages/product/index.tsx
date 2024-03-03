@@ -15,23 +15,25 @@ const ProductPage = () => {
     <div className="flex">
       <Sidebar />
 
-      <div className="flex-col flex-1">
-        <div className="flex justify-between">
-          <Input
-            className=""
-            type="text"
-            placeholder="Search for products"
-            endAdornment={<IoIosSearch />}
-          />
-          <div className="flex ">
+      <div className="flex-col flex-1 bg-[#f1f7fe] font-sans">
+        <div className="flex justify-between p-3 px-6">
+          <div className="flex rounded-md">
+            <Input
+              className="border-slate-300 border rounded-md"
+              type="text"
+              placeholder="Search for products"
+              endAdornment={<IoIosSearch className="text-slate-600" />}
+            />
+          </div>
+          <div className="flex justify-center p-2 gap-4 text-3xl">
             <IoIosNotificationsOutline />
             <FaUserCircle />
           </div>
         </div>
 
-        <div className="bg-[#f4f7fe]">
+        <div className="">
           <div>
-            <h1 className="font-sans px-5 pt-3 font-bold text-2xl">Sales Overview</h1>
+            <h1 className="px-5 pt-3 font-bold text-2xl">Sales Overview</h1>
           </div>
 
           <div className="flex rounded-lg p-4 gap-2 justify-between">
@@ -68,9 +70,12 @@ const ProductPage = () => {
             />
           </div>
 
-          {/* <div>
-          order and sales overview
-        </div> */}
+          <div className="flex justify-between">
+            {/* <div>
+              graph
+            </div> */}
+            <div>{/* <SalesCard /> */}</div>
+          </div>
 
           <div className="flex gap-4 p-4">
             <div>

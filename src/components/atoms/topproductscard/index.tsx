@@ -6,26 +6,26 @@ const TopProductCard = () => {
     <div className="flex-col flex-1 rounded-lg bg-white p-2 border-1 shadow-md">
       <div className="flex justify-between items-center p-3">
         <div className="">
-          <h1 className="font-sans font-semibold">Top Products</h1>
+          <h1 className="font-bold text-xl">Top Products</h1>
         </div>
         <div>
           <BsThreeDots />
         </div>
       </div>
 
-      <table className="table-auto text-sm font-sans">
-        <thead>
-            <tr className="text-sm text-slate-600">
-                <th className="px-4 py-2">No.</th>
-                <th className="px-4 py-2">Product</th>
-                <th className="px-4 py-2">Revenue</th>
-                <th className="px-4 py-2">Stock</th>
-                <th className="px-4 py-2">Status</th>
-                <th className="px-4 py-2">Interest</th>
+      <table className="table-auto text-center">
+        <thead className="text-slate-500">
+            <tr>
+                <th className="px-4 py-2 font-medium">No.</th>
+                <th className="px-4 py-2 font-medium">Product</th>
+                <th className="px-4 py-2 font-medium">Revenue</th>
+                <th className="px-4 py-2 font-medium">Stock</th>
+                <th className="px-4 py-2 font-medium">Status</th>
+                <th className="px-4 py-2 font-medium">Interest</th>
             </tr>           
         </thead>
 
-        <tbody className="text-xs">
+        <tbody className="text-sm text-slate-600 antialiased">
             <tr>
                 <td className="px-4 py-2">1</td>
                 <td className="px-6 py-2">Dell XPS 15</td>
