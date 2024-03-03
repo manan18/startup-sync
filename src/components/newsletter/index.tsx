@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import { RiSpamLine } from "react-icons/ri";
 import { IoCalendarOutline } from "react-icons/io5";
-import Button from '../atoms/button';
-import Input from '../atoms/input';
+import Button from "../atoms/button";
+import Input from "../atoms/input";
 
 const NewsLetter = () => {
     return (
@@ -51,4 +51,4 @@ const NewsLetter = () => {
     )
 }
 
-export default NewsLetter
+export default NewsLetter;

@@ -3,15 +3,20 @@ import navLinks from "@/data/landing/nav-links";
 import Link from "next/link";
 import Button from "../atoms/button";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import logo from "@/assets/img/newlogo.svg";
 
 const HomeHero = () => {
   const router = useRouter();
   const handleRegister = () => {
-    router.push('/signup')
-  }
+    router.push("/signup");
+  };
 
   return (
-    <div className="h-screen flex flex-col relative w-screen overflow-hidden">
+    <div
+      className="h-screen flex flex-col relative w-screen overflow-hidden"
+      suppressHydrationWarning
+    >
       <video
         autoPlay
         muted
@@ -22,7 +27,7 @@ const HomeHero = () => {
       </video>
       <div className="absolute -z-10 w-full h-full bg-black opacity-50"></div>
       <div className="flex justify-between p-6 items-center">
-        <h1 className="text-white text-2xl">Startup Sync</h1>
+        <Image src={logo} alt="logo" width={170} height={170} className="" />
         <div className="flex gap-8 items-center justify-center">
           {navLinks.map((link, index) => (
             <Link
@@ -45,7 +50,9 @@ const HomeHero = () => {
           </p>
           <div className="flex gap-4">
             <Button onClick={handleRegister}>Register</Button>
-            <Button><Link href="#company">Learn More</Link></Button>
+            <Button>
+              <Link href="#company">Learn More</Link>
+            </Button>
           </div>
         </div>
       </div>
