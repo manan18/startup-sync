@@ -7,7 +7,10 @@ const Stats = () => {
   return (
     //@ts-ignore
     <ScrollTrigger onEnter={() => setShow(true)} onExit={() => setShow(false)}>
-      <section className="grid grid-cols-3 gap-4 flex-col section1 border-t-2 border-gray-300 p-5 text-center">
+      <section
+        className="grid grid-cols-3 gap-4 flex-col section1 border-t-2 border-gray-300 p-5 text-center"
+        suppressHydrationWarning
+      >
         {/* Users */}
         <div className="p-4 ">
           <h2 className="text-3xl font-semibold mb-2 text-[#ff6b35]">

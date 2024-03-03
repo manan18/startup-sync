@@ -5,16 +5,15 @@ import Button from "../atoms/button";
 
 const Footer = () => {
   return (
-    <footer className="underline-effect bg-gray-900 flex-col justify-center w-screen text-sm text-gray-300">
+    <footer
+      className="underline-effect bg-gray-900 flex-col justify-center w-screen text-sm text-gray-300"
+      suppressHydrationWarning
+    >
       <div className="max-w-[80%] mx-auto my-auto h-full flex-col justify-center border-b border-gray-600 pb-4">
         <div className="footer-bar items-end flow-root border-b border-gray-600 mb-5">
           <div className="flex gap-8 justify-left float-left">
             {footerLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.path}
-                className=" px-3 py-3 mt-3"
-              >
+              <Link key={index} href={link.path} className=" px-3 py-3 mt-3">
                 {link.title}
               </Link>
             ))}
@@ -134,7 +133,9 @@ const Footer = () => {
         </div>
       </div>
       {/* <hr className="mt-3 opacity-50" /> */}
-      <div className=" flex justify-center py-5">Startup Sync © All Rights Reserved</div>
+      <div className=" flex justify-center py-5">
+        Startup Sync © All Rights Reserved
+      </div>
     </footer>
   );
 };

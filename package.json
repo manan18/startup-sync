@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/react": "^6.1.11",
     "@headlessui/react": "^1.7.18",
     "@types/js-cookie": "^3.0.6",
     "axios": "^1.6.7",

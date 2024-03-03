@@ -7,11 +7,14 @@ import { useRouter } from "next/router";
 const HomeHero = () => {
   const router = useRouter();
   const handleRegister = () => {
-    router.push('/signup')
-  }
+    router.push("/signup");
+  };
 
   return (
-    <div className="h-screen flex flex-col relative w-screen overflow-hidden">
+    <div
+      className="h-screen flex flex-col relative w-screen overflow-hidden"
+      suppressHydrationWarning
+    >
       <video
         autoPlay
         muted
@@ -45,7 +48,9 @@ const HomeHero = () => {
           </p>
           <div className="flex gap-4">
             <Button onClick={handleRegister}>Register</Button>
-            <Button><Link href="#company">Learn More</Link></Button>
+            <Button>
+              <Link href="#company">Learn More</Link>
+            </Button>
           </div>
         </div>
       </div>
