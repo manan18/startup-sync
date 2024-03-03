@@ -4,6 +4,7 @@ import man2 from '@/assets/img/man2.jpg'
 import man3 from '@/assets/img/man3.jpg'
 import woman2 from '@/assets/img/woman2.jpg'
 import woman3 from '@/assets/img/woman3.jpg'
+import blm1 from '@/assets/img/blm1.jpg'
 
 const Transactions = [
     {
@@ -35,6 +36,18 @@ const Transactions = [
         name: 'Samantha Dixit',
         date: '12th May, 2021',
         amount: '-$999.99'
+    },
+    {
+        image: woman3,
+        name: 'Jennifer Brown',
+        date: '12th May, 2021',
+        amount: '+$1056.73'
+    },
+    {
+        image: blm1,
+        name: 'Jacob Brown',
+        date: '12th May, 2021',
+        amount: '-$870.34'
     }
 ]
 
