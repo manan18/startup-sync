@@ -24,6 +24,7 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { FaRegBell } from "react-icons/fa";
+import Sidebar from '@/components/sidebar';
 
 const navigation = [
   { name: 'Home', href: '#', icon: GoHome, current: false },
@@ -34,7 +35,7 @@ const navigation = [
   { name: 'Settings', href: '#', icon: FaCog, current: true },
 ]
 const secondaryNavigation = [
-  { name: 'Help', href: '#', icon: AiOutlineQuestionCircle},
+  { name: 'Help', href: '#', icon: AiOutlineQuestionCircle },
   { name: 'Logout', href: '#', icon: FaArrowRight },
 ]
 const tabs = [
@@ -57,7 +58,7 @@ export default function Settings() {
 
   return (
     <>
-      <div>
+      <div className='bg-[#f4f7fe]'>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
             <Transition.Child
@@ -106,7 +107,7 @@ export default function Settings() {
                   <div className="flex flex-shrink-0 items-center px-4">
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=600"
+                      src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600"
                       alt="Easywire"
                     />
                   </div>
@@ -119,7 +120,7 @@ export default function Settings() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-purple-50 border-purple-600 text-purple-600'
+                                ? 'bg-blue-50 border-blue-600 text-blue-600'
                                 : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                               'group border-l-4 py-2 px-3 flex items-center text-base font-medium'
                             )}
@@ -127,7 +128,7 @@ export default function Settings() {
                           >
                             <item.icon
                               className={classNames(
-                                item.current ? 'text-purple-500' : 'text-gray-400 group-hover:text-gray-500',
+                                item.current ? 'text-blue-500' : 'text-gray-400 group-hover:text-gray-500',
                                 'mr-4 flex-shrink-0 h-6 w-6'
                               )}
                               aria-hidden="true"
@@ -163,54 +164,9 @@ export default function Settings() {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+        <div className="hidden md:fixed md:inset-y-0 md:flex md:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <nav className="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-gray-50 pt-5 pb-4">
-            <div className="flex flex-shrink-0 items-center px-4">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=600"
-                alt="Easywire"
-              />
-            </div>
-            <div className="mt-5 flex-grow">
-              <div className="space-y-1">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? 'bg-purple-50 border-purple-600 text-purple-600'
-                        : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50',
-                      'group border-l-4 py-2 px-3 flex items-center text-sm font-medium'
-                    )}
-                  >
-                    <item.icon
-                      className={classNames(
-                        item.current ? 'text-purple-500' : 'text-gray-400 group-hover:text-gray-500',
-                        'mr-3 flex-shrink-0 h-6 w-6'
-                      )}
-                      aria-hidden="true"
-                    />
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="block w-full flex-shrink-0">
-              {secondaryNavigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="group flex items-center border-l-4 border-transparent py-2 px-3 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-                >
-                  <item.icon className="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </nav>
+          <Sidebar />
         </div>
 
         {/* Content area */}
@@ -219,7 +175,7 @@ export default function Settings() {
             <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white">
               <button
                 type="button"
-                className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 md:hidden"
+                className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 md:hidden"
                 onClick={() => setSidebarOpen(true)}
               >
                 <span className="sr-only">Open sidebar</span>
@@ -258,7 +214,7 @@ export default function Settings() {
                 <div className="ml-4 flex items-center md:ml-6">
                   <button
                     type="button"
-                    className="rounded-full bg-white p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                    className="rounded-full bg-white p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   >
                     <FaRegBell className="h-6 w-6" aria-hidden="true" />
                     <span className="sr-only">View notifications</span>
@@ -271,7 +227,7 @@ export default function Settings() {
               <div className="relative mx-auto max-w-4xl md:px-8 xl:px-0">
                 <div className="pt-10 pb-16">
                   <div className="px-4 sm:px-6 md:px-0">
-                    <h1 className="text-3xl font-bold tracking-tight text-gray-900">Settings</h1>
+                    <h1 className="text-3xl font-semibold tracking-wide text-gray-900">Settings</h1>
                   </div>
                   <div className="px-4 sm:px-6 md:px-0">
                     <div className="py-6">
@@ -283,7 +239,7 @@ export default function Settings() {
                         <select
                           id="selected-tab"
                           name="selected-tab"
-                          className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-purple-500 focus:outline-none focus:ring-purple-500 sm:text-sm"
+                          className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
                           defaultValue={tabs.find((tab) => tab?.current)?.name}
                         >
                           {tabs.map((tab) => (
@@ -300,7 +256,7 @@ export default function Settings() {
                                 href={tab.href}
                                 className={classNames(
                                   tab.current
-                                    ? 'border-purple-500 text-purple-600'
+                                    ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
                                   'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
                                 )}
@@ -329,7 +285,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -349,7 +305,7 @@ export default function Settings() {
                                 <span className="ml-4 flex flex-shrink-0 items-start space-x-4">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -358,7 +314,7 @@ export default function Settings() {
                                   </span>
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Remove
                                   </button>
@@ -372,7 +328,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -386,7 +342,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -413,7 +369,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -427,7 +383,7 @@ export default function Settings() {
                                 <span className="ml-4 flex flex-shrink-0 items-start space-x-4">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -436,7 +392,7 @@ export default function Settings() {
                                   </span>
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Remove
                                   </button>
@@ -452,8 +408,8 @@ export default function Settings() {
                                   checked={automaticTimezoneEnabled}
                                   onChange={setAutomaticTimezoneEnabled}
                                   className={classNames(
-                                    automaticTimezoneEnabled ? 'bg-purple-600' : 'bg-gray-200',
-                                    'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 sm:ml-auto'
+                                    automaticTimezoneEnabled ? 'bg-blue-600' : 'bg-gray-200',
+                                    'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-auto'
                                   )}
                                 >
                                   <span
@@ -478,8 +434,8 @@ export default function Settings() {
                                   checked={autoUpdateApplicantDataEnabled}
                                   onChange={setAutoUpdateApplicantDataEnabled}
                                   className={classNames(
-                                    autoUpdateApplicantDataEnabled ? 'bg-purple-600' : 'bg-gray-200',
-                                    'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 sm:ml-auto'
+                                    autoUpdateApplicantDataEnabled ? 'bg-blue-600' : 'bg-gray-200',
+                                    'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-auto'
                                   )}
                                 >
                                   <span

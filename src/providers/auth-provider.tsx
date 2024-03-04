@@ -4,6 +4,7 @@ import { UserType } from "@/types/user";
 import instance from "@/config/axios.config";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 
 interface AuthProviderProps {
     children: React.ReactNode;
@@ -26,12 +27,23 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         router.reload();
     };
 
-    const signup = async (username: string, company: string, email: string, password: string) => {
+    const signup = async (username: string, company: { name: string }, email: string, password: string) => {
         try {
-            const response = await instance.post('/auth/local/register', { email, username, company, password })
-            const data = response.data;
-            setUser(data.user);
-            Cookies.set('token', data.jwt);
+            const response = await instance.post('/auth/local/register', { email, username, password });
+            const name = company.name;
+            const companyResponse = await instance.post('/companies', { data: { name } }, {
+                headers: {
+                    Authorization: `Bearer ${response.data.jwt}`
+                }
+            });
+            await instance.put(`/users/${response.data.user.id}`, { company: companyResponse.data.id }, {
+                headers: {
+                    Authorization: `Bearer ${response.data.jwt}`
+                }
+            });
+            Cookies.set('token', response.data.jwt);
+            setUser(response.data.user);
+            toast.success('Account created successfully');
         } catch (error) {
             console.log(error);
         }
@@ -40,7 +52,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     useEffect(() => {
         const token = Cookies.get('token');
         if (token) {
-            instance.get('/users/me', {
+            instance.get('/users/me?populate=companies', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

@@ -23,9 +23,9 @@ const sidebarItems1: SidebarItem[] = [
     },
     {
         id: 1,
-        title: "Team Management",
-        icon: <RiTeamFill />,
-        slug: "/team",
+        title: "Product Analysis",
+        icon: <SiGoogleanalytics />,
+        slug: "/product",
     },
     {
         id: 2,
@@ -35,21 +35,21 @@ const sidebarItems1: SidebarItem[] = [
     },
     {
         id: 3,
-        title: "Merchandise Store",
-        icon: <IoBagCheck />,
-        slug: "/merchandise",
-    },
-    {
-        id: 4,
-        title: "Product Analysis",
-        icon: <SiGoogleanalytics />,
-        slug: "/product",
-    },
-    {
-        id: 5,
         title: "Expense Tracking",
         icon: <MdOutlineAttachMoney className="text-lg" />,
         slug: "/transactionsPage",
+    },
+    {
+        id: 4,
+        title: "Team Management",
+        icon: <RiTeamFill />,
+        slug: "/employees",
+    },
+    {
+        id: 5,
+        title: "Merchandise Store",
+        icon: <IoBagCheck />,
+        slug: "/merchandise",
     },
     {
         id: 6,

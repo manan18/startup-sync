@@ -52,7 +52,7 @@ const SignUpForm = () => {
             return
         }
         try {
-            await signup(formstate.username, formstate.company, formstate.email, formstate.password)
+            await signup(formstate.username, { name: formstate.company }, formstate.email, formstate.password)
             toast.success('Signed Up Successfully', {
                 position: 'top-right',
                 autoClose: 3000,
