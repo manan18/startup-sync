@@ -21,10 +21,10 @@ export const CustomerCard: React.FC<CustomerCardProps> = ({
   percent3,
 }) => {
   return (
-    <div className="flex-col flex-1 rounded-lg bg-white p-2 border-1 shadow-md">
+    <div className="flex-col flex-1 rounded-lg bg-white p-4 border-1 shadow-md">
       <div className="flex justify-between p-2">
         <div>
-          <h1 className="font-bold text-xl">Customer</h1>
+          <h1 className="font-semibold text-2xl">Customer</h1>
         </div>
         <div className="items-center">
           <BsThreeDots />

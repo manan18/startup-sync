@@ -15,9 +15,9 @@ import { OrderCard } from "@/components/atoms/ordercard";
 const ProductPage = () => {
   return (
     <div className="flex h-screen overflow-hidden">
-      <Sidebar/>
-      <div className="flex-col flex-1 bg-[#f1f7fe] font-sans overflow-scroll">
-        <div className="flex justify-between p-3 px-6">
+      <Sidebar />
+      <div className="flex-col flex-1 bg-[#f1f7fe] font-sans overflow-scroll p-2">
+        <div className="flex justify-between p-2">
           <div className="flex rounded-md">
             <Input
               className="border-slate-300 border rounded-md"
@@ -34,10 +34,10 @@ const ProductPage = () => {
 
         <div className="">
           <div>
-            <h1 className="px-5 pt-3 font-bold text-2xl">Sales Overview</h1>
+            <h1 className="p-2 font-semibold text-2xl">Sales Overview</h1>
           </div>
 
-          <div className="flex rounded-lg p-4 gap-2 justify-between">
+          <div className="flex rounded-lg p-2 gap-2 justify-between">
             <ProductCard
               icon={<AiOutlineDollarCircle />}
               title="Total Sales"
@@ -71,20 +71,17 @@ const ProductPage = () => {
             />
           </div>
 
-          <div className="flex">
-            <div className="p-4">
+          <div className="flex justify-between">
+            <div className="p-2 w-3/4">
               <OrderCard />
             </div>
-            <div className="p-4">
+            <div className="p-2 w-1/4">
               <SalesCard />
             </div>
           </div>
 
-          <div className="flex gap-2 p-4">
-            <div>
-              <TopProductCard />
-            </div>
-            <div>
+          <div className="flex gap-2 p-2">
+            <div className="w-1/4">
               <CustomerCard
                 title="Customer"
                 current="Current Customer"
@@ -94,6 +91,9 @@ const ProductPage = () => {
                 percent2="20%"
                 percent3="20%"
               />
+            </div>
+            <div className="w-3/4">
+              <TopProductCard />
             </div>
           </div>
         </div>

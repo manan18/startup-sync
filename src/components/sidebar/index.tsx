@@ -14,16 +14,9 @@ const Sidebar = () => {
       <div className="main-content flex flex-col gap-2 p-2">
         {sidebarItems1.map((sidebarItem, index) => {
           return (
-            <div
-              className={clsx(
-                "p-2 rounded-md hover:bg-blue-900 px-3 transition-all duration-75 hover:scale-105 text-md hover:cursor-pointer",
-                {
-                  "bg-blue-900": router.pathname === sidebarItem.slug,
-                }
-              )}
-              key={index}
-              onClick={() => router.push(sidebarItem.slug)}
-            >
+            <div className={clsx("p-2 rounded-md hover:bg-blue-900 px-3 transition-all duration-75 hover:scale-105 text-md hover:cursor-pointer", {
+              "bg-blue-900": router.pathname === sidebarItem.slug,
+            })} key={index} onClick={() => router.push(sidebarItem.slug)}>
               <div className="flex items-center">
                 <div className="mr-3">{sidebarItem.icon}</div>
                 <div>{sidebarItem.title}</div>
