@@ -6,7 +6,7 @@ import TCard1 from "@/components/transactionsPageComp/TCard1";
 const TransactionsPage = () => {
   return (
     <div>
-      <div className="grid grid-cols-[15%,1fr] h-screen">
+      <div className="grid grid-cols-[auto,1fr] h-screen">
         <div className="">
           <Sidebar />
         </div>

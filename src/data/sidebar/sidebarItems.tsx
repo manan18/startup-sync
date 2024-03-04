@@ -49,7 +49,7 @@ const sidebarItems1: SidebarItem[] = [
         id: 5,
         title: "Expense Tracking",
         icon: <MdOutlineAttachMoney className="text-lg" />,
-        slug: "/expense",
+        slug: "/transactionsPage",
     },
     {
         id: 6,
