@@ -66,6 +66,8 @@ const BarChart = () => {
                 },
             },
         },
+        //decrease the width of the bar
+        barThickness: 50,
     };
     Chart.register(...registerables, CategoryScale);
     return (

@@ -11,7 +11,8 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import avatar from "@/assets/img/sample-user.jpg";
 import Image from "next/image";
-import { FaRegHandPeace } from "react-icons/fa6";
+import { IoNotificationsOutline } from "react-icons/io5";
+import Link from "next/link";
 
 export const Greetings = ({ user }: { user: string }) => {
   const hours = new Date().getHours();
@@ -23,7 +24,7 @@ export const Greetings = ({ user }: { user: string }) => {
       : "Good Evening";
   return (
     <div className="flex flex-col gap-3">
-      <p className="text-sm text-gray-400">Hiiiii Sumit,</p>
+      <p className="text-sm text-gray-400">Hiiiii {user},</p>
       <p className="text-2xl font-bold">{time}</p>
     </div>
   );
@@ -133,9 +134,59 @@ export const Popup = ({
   );
 };
 
+export const EventCard = () => {
+  return (
+    <div className="py-4 px-3 w-full bg-white rounded-md shadow">
+      <p className="text-sm font-semibold">Meeting with team</p>
+      <p className="text-xs text-gray-400">10:00 AM - 11:00 AM</p>
+    </div>
+  );
+};
+
+export const EventSection = () => {
+  return (
+    <div className="mt-8">
+      <div className="flex items-center justify-between">
+        <p className="font-semibold">Upcoming Events</p>
+        <Link href={"#"} className="text-sm text-blue-500">
+          View All
+        </Link>
+      </div>
+      <div className="mt-4">
+        <div className="flex items-center gap-4">
+          <div className="rounded-md flex items-center justify-center">
+            <p className="text-sm font-semibold text-[#394e69]">3 September</p>
+          </div>
+          <div className="flex flex-col gap-4 flex-1">
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+          </div>
+        </div>
+        {/* /divider */}
+        <div className="w-full h-[2px] bg-gray-100 my-4"></div>
+        <div className="flex items-center gap-4">
+          <div className="rounded-md flex items-center justify-center">
+            <p className="text-sm font-semibold text-[#394e69]">3 September</p>
+          </div>
+          <div className="flex flex-col gap-4 flex-1">
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const RightBar = () => {
   return (
-    <div className="p-4 py-8 bg-white border-l w-full">
+    <div className="p-4 py-8 bg-white border-l w-full overflow-scroll">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
@@ -144,18 +195,18 @@ export const RightBar = () => {
             className="rounded-full h-10 w-10"
             objectFit="cover"
           />
-          <div className="flex gap-1">
-            <p className="text-sm font-semibold">Sumit</p>
-            <FaRegHandPeace className="text-xl text-gray-500" />
+          <div className="flex gap-1 cursor-pointer">
+            <p className="font-semibold">Sumit</p>
             <RiArrowDropDownLine className="text-xl text-gray-500" />
           </div>
         </div>
         <IconButton
-          icon={<IoRocketSharp />}
+          icon={<IoNotificationsOutline />}
           variant="pill"
           className="bg-[#f4f7fe] border border-gray-300"
         />
       </div>
+      <EventSection />
     </div>
   );
 };
@@ -165,7 +216,7 @@ const EventsPage = () => {
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar />
-      <div className="flex-1 grid grid-cols-[1fr,25%] bg-[#f4f7fe] font-noto-sans">
+      <div className="flex-1 grid grid-cols-[1fr,27%] bg-[#f4f7fe] font-noto-sans">
         <div className="p-8 overflow-scroll">
           <div className="flex h-max items-center justify-between">
             <Greetings user="Sumit" />
