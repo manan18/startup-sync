@@ -6,6 +6,9 @@ const nextConfig = {
       {
         hostname: "upload.wikimedia.org",
       },
+      {
+        hostname: "via.placeholder.com",
+      },
     ],
   },
 };

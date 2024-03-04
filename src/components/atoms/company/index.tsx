@@ -21,7 +21,11 @@ const CompanySection = () => {
   ];
 
   return (
-    <div className="p-4 h-screen overflow-hidden flex flex-col pb-0" id="company">
+    <div
+      className="p-4 h-screen overflow-hidden flex flex-col pb-0"
+      id="company"
+      suppressHydrationWarning
+    >
       <div className="w-[70%] mx-auto">
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>

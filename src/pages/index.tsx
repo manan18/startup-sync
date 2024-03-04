@@ -7,17 +7,23 @@ import Blog from "@/components/blogs";
 import Footer from "@/components/footer";
 import Faq from "@/components/faq";
 import Features from "@/components/features";
+import Testimonial from "@/components/testimonial";
+import NewsLetter from "@/components/newsletter";
+import Cta from "@/components/cta";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden" suppressHydrationWarning>
       <HomeHero />
       <CompanySection />
       <Features />
       <Stats />
+      <Testimonial />
       <Blog />
+      <NewsLetter />
       <Faq />
+      <Cta />
       <Footer />
     </div>
   );

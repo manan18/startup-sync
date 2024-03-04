@@ -18,16 +18,16 @@ const teamLinks = [
         startCol: 3,
     },
     {
-        img: shruti,
-        name: 'Shruti Gajbhiye',
-        role: 'Founder',
-        startCol: 5,
-    },
-    {
         img: sakshi,
         name: 'Sakshi Sharma',
         role: 'Founder',
         startCol: 2,
+    },
+    {
+        img: shruti,
+        name: 'Shruti Gajbhiye',
+        role: 'Founder',
+        startCol: 5,
     },
     {
         img: manan,

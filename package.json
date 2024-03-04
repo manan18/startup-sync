@@ -9,12 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/react": "^6.1.11",
     "@headlessui/react": "^1.7.18",
     "@types/js-cookie": "^3.0.6",
     "axios": "^1.6.7",
+    "chart.js": "^4.4.2",
     "js-cookie": "^3.0.5",
     "next": "14.1.0",
+<<<<<<< HEAD
     "react": "^18.2.0",
+=======
+    "react": "^18",
+    "react-chartjs-2": "^5.2.0",
+>>>>>>> b92c5ed06c94fda4fda51c7ed6fda4794b4e9a49
     "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-hook-form": "^7.50.1",
