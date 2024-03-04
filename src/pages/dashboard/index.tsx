@@ -10,8 +10,11 @@ import { MdLogout } from "react-icons/md";
 import BarChart from "@/components/charts/bar";
 import DoughnutChart from "@/components/charts/doughnut";
 import TransactionCard from "@/components/atoms/transactionCard";
-import ria from '@/assets/img/ria2.jpg'
 import Transactions from "@/data/transaction/transactionData";
+import DashCardData from "@/data/dashCardData/dashCardData";
+import DashCard from "@/components/atoms/dashCard";
+import { Line } from "react-chartjs-2";
+import LineChart from "@/components/charts/line";
 
 const Dashboard = () => {
   const menubar = [{
@@ -57,7 +60,7 @@ const Dashboard = () => {
             </Dropdown>
           </div>
         </div>
-        <div className="grid-cols-[auto,auto,auto] grid-rows-[225px,auto,225px,auto] h-full grid gap-2 p-2">
+        <div className="grid-cols-[auto,auto,auto] grid-rows-[225px,auto,162px,auto] grid gap-2 p-2">
           <div className="col-span-2 row-span-2 bg-white p-6 rounded-md shadow-md flex flex-col">
             <h1 className="text-2xl font-semibold">Sales Overview</h1>
             <BarChart />
@@ -72,8 +75,17 @@ const Dashboard = () => {
               <TransactionCard key={index} image={transaction.image} name={transaction.name} date={transaction.date} amount={transaction.amount} />
             ))}
           </div>
-          <div className="col-span-2 bg-red-300"></div>
-          <div className="col-span-2 bg-red-300"></div>
+          <div className="col-span-2">
+            <div className="flex justify-between gap-2">
+              {DashCardData.map((data, index) => (
+                <DashCard key={index} icon={data.icon} data={data.data} title={data.title} stat={data.stat} iconstyle={data.iconstyle} textstyle={data.textstyle} />
+              ))}
+            </div>
+          </div>
+          <div className="col-span-2 bg-white rounded-md shadow-md p-6 h-[400px] justify-between">
+            <h1 className="text-2xl font-semibold ">Viewer Analytics</h1>
+            <LineChart />
+          </div>
         </div>
       </div>
     </div>

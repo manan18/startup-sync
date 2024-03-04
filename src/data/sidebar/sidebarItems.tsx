@@ -31,7 +31,7 @@ const sidebarItems1: SidebarItem[] = [
         id: 2,
         title: "Event Management",
         icon: <FaCalendarAlt />,
-        slug: "/event",
+        slug: "/events",
     },
     {
         id: 3,
