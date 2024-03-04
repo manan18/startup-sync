@@ -1,7 +1,7 @@
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-const DoughnutChart = () => {
+const PieChart = () => {
   const data = {
     labels: [
       "Total Revenue",
@@ -31,9 +31,9 @@ const DoughnutChart = () => {
   };
   return (
     <div className="p-2">
-      <Doughnut data={data} />
+      <Pie data={data} />
     </div>
   );
 };
 
-export default DoughnutChart;
+export default PieChart;

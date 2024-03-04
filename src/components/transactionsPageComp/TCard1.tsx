@@ -10,12 +10,12 @@ interface TCard1Props {
 
 const TCard1 = ({ money, text1, text2, icon }: TCard1Props) => {
   return (
-    <div className="border-2 border-gray-300 flex p-7 rounded-lg h-full">
+    <div className="border-2 border-gray-300 flex p-3 rounded-lg h-full">
       <div className="flex flex-col">
-        <div className="text-4xl p-4 pl-1">{icon}</div>
-        <div className="font-semibold text-4xl mb-2">{money}</div>
+        <div className="text-2xl p-4 pl-1">{icon}</div>
+        <div className="font-semibold text-2xl mb-2">{money}</div>
         <div className="text-lg mb-2">{text1}</div>
-        <div className="bg-gray-200 h-fit p-1 rounded">{text2}</div>
+        <div className="bg-gray-200 h-fit w-fit p-1 rounded text-sm">{text2}</div>
       </div>
     </div>
   );

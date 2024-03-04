@@ -3,10 +3,10 @@ import LineChart2 from "../charts/line2";
 
 const TGraphCard = () => {
   return (
-    <div className="p-7">
+    <div className="p-5">
       <div className="Text flex justify-between">
         <div className="flex flex-col">
-          <div className="font-semibold text-3xl mb-5">Expenses</div>
+          <div className="font-semibold text-2xl mb-5">Expenses</div>
         </div>
       </div>
       <div className="Graph">

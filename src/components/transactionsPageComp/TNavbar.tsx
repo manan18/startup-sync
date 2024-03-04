@@ -3,9 +3,9 @@ import { IoMdDownload } from "react-icons/io";
 
 const TNavbar = () => {
   return (
-    <div className="flex p-4 justify-between items-center border-b-2 border-gray-300">
+    <div className="flex p-4 justify-between items-center">
       <div className="heading flex flex-col">
-        <div className="text-3xl mb-2 font-semibold">Expense Summary</div>
+        <div className="text-2xl mb-1 font-semibold">Expense Summary</div>
         <div>
           Track & manage your spending with ease. Overview of your spending by
           category, document type and more.

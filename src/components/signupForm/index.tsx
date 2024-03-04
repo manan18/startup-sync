@@ -60,6 +60,7 @@ const SignUpForm = () => {
                 closeOnClick: true,
                 draggable: false
             })
+            router.push('/login')
         } catch (error: any) {
             toast.error(error.response.data.message, {
                 position: 'top-right',

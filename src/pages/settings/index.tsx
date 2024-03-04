@@ -25,6 +25,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { FaRegBell } from "react-icons/fa";
 import Sidebar from '@/components/sidebar';
+import Input from '@/components/atoms/input';
 
 const navigation = [
   { name: 'Home', href: '#', icon: GoHome, current: false },
@@ -83,7 +84,7 @@ export default function Settings() {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-white pt-5 pb-4">
+                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col  pt-5 pb-4">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-300"
@@ -172,7 +173,7 @@ export default function Settings() {
         {/* Content area */}
         <div className="md:pl-64">
           <div className="mx-auto flex max-w-4xl flex-col md:px-8 xl:px-0">
-            <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white">
+            {/* <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200">
               <button
                 type="button"
                 className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 md:hidden"
@@ -184,12 +185,6 @@ export default function Settings() {
               <div className="flex flex-1 justify-between px-4 md:px-0">
                 <div className="flex flex-1">
                   <form className="flex w-full md:ml-0" action="#" method="GET">
-                    <label htmlFor="mobile-search-field" className="sr-only">
-                      Search
-                    </label>
-                    <label htmlFor="desktop-search-field" className="sr-only">
-                      Search
-                    </label>
                     <div className="relative w-full text-gray-400 focus-within:text-gray-600">
                       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
                         <HiMagnifyingGlass className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
@@ -214,14 +209,14 @@ export default function Settings() {
                 <div className="ml-4 flex items-center md:ml-6">
                   <button
                     type="button"
-                    className="rounded-full bg-white p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="rounded-full  p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   >
                     <FaRegBell className="h-6 w-6" aria-hidden="true" />
                     <span className="sr-only">View notifications</span>
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <main className="flex-1">
               <div className="relative mx-auto max-w-4xl md:px-8 xl:px-0">
@@ -285,7 +280,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -305,7 +300,7 @@ export default function Settings() {
                                 <span className="ml-4 flex flex-shrink-0 items-start space-x-4">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -314,7 +309,7 @@ export default function Settings() {
                                   </span>
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Remove
                                   </button>
@@ -328,7 +323,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -342,7 +337,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -369,7 +364,7 @@ export default function Settings() {
                                 <span className="ml-4 flex-shrink-0">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -383,7 +378,7 @@ export default function Settings() {
                                 <span className="ml-4 flex flex-shrink-0 items-start space-x-4">
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Update
                                   </button>
@@ -392,7 +387,7 @@ export default function Settings() {
                                   </span>
                                   <button
                                     type="button"
-                                    className="rounded-md bg-white font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    className="rounded-md  font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                   >
                                     Remove
                                   </button>
@@ -416,7 +411,7 @@ export default function Settings() {
                                     aria-hidden="true"
                                     className={classNames(
                                       automaticTimezoneEnabled ? 'translate-x-5' : 'translate-x-0',
-                                      'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+                                      'inline-block h-5 w-5 transform rounded-full  shadow ring-0 transition duration-200 ease-in-out'
                                     )}
                                   />
                                 </Switch>
@@ -442,7 +437,7 @@ export default function Settings() {
                                     aria-hidden="true"
                                     className={classNames(
                                       autoUpdateApplicantDataEnabled ? 'translate-x-5' : 'translate-x-0',
-                                      'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+                                      'inline-block h-5 w-5 transform rounded-full  shadow ring-0 transition duration-200 ease-in-out'
                                     )}
                                   />
                                 </Switch>
