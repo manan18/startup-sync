@@ -14,10 +14,9 @@ import { OrderCard } from "@/components/atoms/ordercard";
 
 const ProductPage = () => {
   return (
-    <div className="flex">
-      <Sidebar />
-
-      <div className="flex-col flex-1 bg-[#f1f7fe] font-sans">
+    <div className="flex h-screen overflow-hidden">
+      <Sidebar/>
+      <div className="flex-col flex-1 bg-[#f1f7fe] font-sans overflow-scroll">
         <div className="flex justify-between p-3 px-6">
           <div className="flex rounded-md">
             <Input
