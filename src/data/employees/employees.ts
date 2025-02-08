@@ -10,7 +10,7 @@ const employees = [
   },
   {
     img: "/images/manan.jpg",
-    name: "Manan",
+    name: "Ria",
     type: "Admin",
     department: "Management",
     title: "Manager",

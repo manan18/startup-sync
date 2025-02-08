@@ -299,7 +299,7 @@ const Employees = () => {
         <div className="max-w-[90%] mx-auto">
           <div className="flex flex-col align-center justufy-center">
             <EmployeeTable
-              data={filteredData}
+              data={data}
               start={indexOfFirstEntry}
               end={indexOfLastEntry}
             />
